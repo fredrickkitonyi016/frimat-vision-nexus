@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ["Poppins", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
-				display: ["Orbitron", "Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+				sans: ["Times New Roman", "Times", "serif"],
+				display: ["Times New Roman", "Times", "serif"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
