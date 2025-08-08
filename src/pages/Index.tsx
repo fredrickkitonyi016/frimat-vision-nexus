@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Activity, Bug, ShieldAlert, Eye, Lock, KeyRound, Cloud, Network, AlertTriangle } from "lucide-react";
+import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Briefcase, Globe, Printer, ShoppingBag } from "lucide-react";
 
 const Section = ({ id, title, subtitle, children }: { id: string; title: string; subtitle?: string; children: React.ReactNode }) => (
   <section id={id} className="section container animate-fade-in">
@@ -62,20 +62,15 @@ export default function Index() {
           </div>
         </Section>
 
-        <Section id="services" title="Cybersecurity Services" subtitle="Protect, detect, and respond — comprehensive security for modern organizations.">
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <Section id="services" title="Services" subtitle="Our key offerings for individuals, businesses, and public services.">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
             {[
-              { title: "Threat Intelligence", icon: Activity, desc: "Proactive intel on emerging threats and IOCs." },
-              { title: "Penetration Testing", icon: Bug, desc: "Red-team style testing for web, API, mobile, and network." },
-              { title: "Vulnerability Management", icon: ShieldAlert, desc: "Continuous scanning, prioritization, and remediation." },
-              { title: "SOC Monitoring (SIEM/XDR)", icon: Eye, desc: "24/7 detection, alert triage, and response playbooks." },
-              { title: "Incident Response (DFIR)", icon: AlertTriangle, desc: "Containment, forensics, and rapid recovery." },
-              { title: "Cloud Security", icon: Cloud, desc: "Hardening for AWS/Azure/GCP with guardrails and policy-as-code." },
-              { title: "Identity & Access (IAM)", icon: KeyRound, desc: "SSO/MFA, least-privilege, and privileged access workflows." },
-              { title: "Zero Trust Architecture", icon: Lock, desc: "Segment, verify, and enforce continuous trust evaluation." },
-              { title: "Network Security", icon: Network, desc: "Firewalling, microsegmentation, and secure connectivity." },
+              { title: "ICT Consultancy", icon: Briefcase, desc: "IT strategy, systems design, infrastructure planning, and support." },
+              { title: "E‑Citizen & Gov Services", icon: Globe, desc: "Support with e‑citizen registrations, permits, and digital portals." },
+              { title: "Cyber Services", icon: Printer, desc: "Printing, scanning, photocopy, lamination, and document handling." },
+              { title: "Tech Accessories Sales", icon: ShoppingBag, desc: "Laptops, mice, keyboards, routers, cables, and accessories." },
             ].map((s) => (
-              <article key={s.title} className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
+              <article key={s.title} className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md transition-transform hover:scale-[1.02] hover:shadow-xl">
                 <s.icon className="h-6 w-6 text-accent" />
                 <h4 className="mt-3 text-lg font-medium">{s.title}</h4>
                 <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
