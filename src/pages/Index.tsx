@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Briefcase, Globe, Printer, ShoppingBag } from "lucide-react";
+import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Briefcase, Globe, Printer, ShoppingBag, Wifi, Palette, Camera, FileText, Layers, Wrench, Network, GraduationCap } from "lucide-react";
 
 const Section = ({ id, title, subtitle, children }: { id: string; title: string; subtitle?: string; children: React.ReactNode }) => (
   <section id={id} className="section container animate-fade-in">
@@ -69,6 +69,14 @@ export default function Index() {
               { title: "E‑Citizen & Gov Services", icon: Globe, desc: "Support with e‑citizen registrations, permits, and digital portals." },
               { title: "Cyber Services", icon: Printer, desc: "Printing, scanning, photocopy, lamination, and document handling." },
               { title: "Tech Accessories Sales", icon: ShoppingBag, desc: "Laptops, mice, keyboards, routers, cables, and accessories." },
+              { title: "Internet & Wi‑Fi Access", icon: Wifi, desc: "Reliable browsing, hotspot access, and online support." },
+              { title: "Graphic Design & Branding", icon: Palette, desc: "Logos, posters, business cards, banners, and layouts." },
+              { title: "Photo & Passport Services", icon: Camera, desc: "Passport photos, ID printing, and quick edits." },
+              { title: "Typing & Document Formatting", icon: FileText, desc: "Professional typing, CVs, letters, and formatting." },
+              { title: "Binding & Lamination", icon: Layers, desc: "Comb binding, spiral binding, and lamination." },
+              { title: "Software Installation & Updates", icon: Wrench, desc: "OS setup, antivirus, office tools, drivers." },
+              { title: "Networking & CCTV Setup", icon: Network, desc: "Home/office networks, routers, and CCTV installs." },
+              { title: "Training & Digital Literacy", icon: GraduationCap, desc: "Basic to advanced computer skills training." },
             ].map((s) => (
               <article key={s.title} className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md transition-transform hover:scale-[1.02] hover:shadow-xl">
                 <s.icon className="h-6 w-6 text-accent" />
