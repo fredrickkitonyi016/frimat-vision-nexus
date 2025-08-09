@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Briefcase, Globe, Printer, ShoppingBag, Wifi, Palette, Camera, FileText, Layers, Wrench, Network, GraduationCap } from "lucide-react";
+import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Cloud, Wrench } from "lucide-react";
 
 const Section = ({ id, title, subtitle, children }: { id: string; title: string; subtitle?: string; children: React.ReactNode }) => (
   <section id={id} className="section container animate-fade-in">
@@ -25,12 +25,18 @@ export default function Index() {
           <p className="mx-auto max-w-2xl text-muted-foreground text-base md:text-lg">
             Connecting Innovation. Delivering Solutions.
           </p>
+          <p className="mx-auto max-w-3xl text-sm md:text-base text-muted-foreground">
+            We build modern, secure and reliable digital solutions that help businesses grow and communities thrive.
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Button variant="cta" size="xl">
-              Get Started
+            <Button variant="cta" size="xl" asChild>
+              <a href="#services">Get Started</a>
             </Button>
-            <Button variant="glass" size="xl">
-              Sign Up
+            <Button variant="glass" size="xl" asChild>
+              <a href="#contact">Request a Quote</a>
+            </Button>
+            <Button variant="glass" size="xl" asChild>
+              <a href="#about">Learn More</a>
             </Button>
           </div>
           <ul className="mt-8 grid grid-cols-3 gap-4 text-xs text-muted-foreground">
@@ -43,40 +49,44 @@ export default function Index() {
 
       <main>
         <Section id="about" title="About" subtitle="We are a modern tech company building secure, scalable, and delightful digital products.">
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
-            <div className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
-              <Rocket className="h-6 w-6 text-accent" />
-              <h3 className="mt-3 text-lg font-medium">Innovation First</h3>
-              <p className="mt-2 text-sm text-muted-foreground">We combine cutting-edge research with practical engineering to accelerate growth.</p>
-            </div>
-            <div className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
-              <Shield className="h-6 w-6 text-accent" />
-              <h3 className="mt-3 text-lg font-medium">Enterprise-Grade</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Security and reliability are built-in, not bolted on.</p>
-            </div>
-            <div className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
-              <Cpu className="h-6 w-6 text-accent" />
-              <h3 className="mt-3 text-lg font-medium">AI-Native</h3>
-              <p className="mt-2 text-sm text-muted-foreground">We leverage AI to deliver smarter workflows and better user experiences.</p>
+          <div className="mx-auto max-w-5xl space-y-8">
+            <p className="text-sm md:text-base text-muted-foreground text-center">
+              At FRIMAT TECHNOLOGIES, our mission is to empower businesses and communities with innovative, reliable, and customer‑centric technology solutions.
+            </p>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              <article className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
+                <Rocket className="h-6 w-6 text-accent" />
+                <h3 className="mt-3 text-lg font-medium">Our Mission</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Deliver secure, modern solutions that connect people, processes, and opportunity.</p>
+              </article>
+              <article className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
+                <Shield className="h-6 w-6 text-accent" />
+                <h3 className="mt-3 text-lg font-medium">Our Vision</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Be a trusted technology partner known for excellence and meaningful impact.</p>
+              </article>
+              <article className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
+                <Cpu className="h-6 w-6 text-accent" />
+                <h3 className="mt-3 text-lg font-medium">Core Values</h3>
+                <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                  <li>• Innovation</li>
+                  <li>• Reliability</li>
+                  <li>• Customer‑Centric Approach</li>
+                  <li>• Excellence</li>
+                </ul>
+              </article>
             </div>
           </div>
         </Section>
 
-        <Section id="services" title="Services" subtitle="Our key offerings for individuals, businesses, and public services.">
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <Section id="services" title="Services" subtitle="What we do best — modern, secure, and scalable solutions.">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             {[
-              { title: "ICT Consultancy", icon: Briefcase, desc: "IT strategy, systems design, infrastructure planning, and support." },
-              { title: "E‑Citizen & Gov Services", icon: Globe, desc: "Support with e‑citizen registrations, permits, and digital portals." },
-              { title: "Cyber Services", icon: Printer, desc: "Printing, scanning, photocopy, lamination, and document handling." },
-              { title: "Tech Accessories Sales", icon: ShoppingBag, desc: "Laptops, mice, keyboards, routers, cables, and accessories." },
-              { title: "Internet & Wi‑Fi Access", icon: Wifi, desc: "Reliable browsing, hotspot access, and online support." },
-              { title: "Graphic Design & Branding", icon: Palette, desc: "Logos, posters, business cards, banners, and layouts." },
-              { title: "Photo & Passport Services", icon: Camera, desc: "Passport photos, ID printing, and quick edits." },
-              { title: "Typing & Document Formatting", icon: FileText, desc: "Professional typing, CVs, letters, and formatting." },
-              { title: "Binding & Lamination", icon: Layers, desc: "Comb binding, spiral binding, and lamination." },
-              { title: "Software Installation & Updates", icon: Wrench, desc: "OS setup, antivirus, office tools, drivers." },
-              { title: "Networking & CCTV Setup", icon: Network, desc: "Home/office networks, routers, and CCTV installs." },
-              { title: "Training & Digital Literacy", icon: GraduationCap, desc: "Basic to advanced computer skills training." },
+              { title: "Web Development", icon: Code2, desc: "Responsive websites, portals, and e‑commerce tailored to your brand." },
+              { title: "Software Development", icon: Cpu, desc: "Custom applications that streamline operations and deliver value." },
+              { title: "IT Support & Maintenance", icon: Wrench, desc: "Proactive support, monitoring, and reliable on‑site/remote help." },
+              { title: "Cybersecurity Solutions", icon: Shield, desc: "Protect your data with audits, hardening, and incident readiness." },
+              { title: "Digital Marketing", icon: Rocket, desc: "SEO, social, and campaigns that grow your audience and leads." },
+              { title: "Cloud Services", icon: Cloud, desc: "Cloud setup, migration, and cost‑efficient operations." },
             ].map((s) => (
               <article key={s.title} className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md transition-transform hover:scale-[1.02] hover:shadow-xl">
                 <s.icon className="h-6 w-6 text-accent" />
@@ -103,15 +113,71 @@ export default function Index() {
         </Section>
 
         <Section id="portfolio" title="Portfolio" subtitle="A snapshot of recent projects and experiments.">
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {["Fintech Dashboard","IoT Platform","AI Copilot","E‑Commerce Infra","Analytics Hub","Data Mesh"]
-              .map((name) => (
-              <figure key={name} className="rounded-xl border border-border bg-card/60 p-5 backdrop-blur-md">
-                <div className="aspect-[4/3] w-full rounded-lg bg-secondary/50" />
-                <figcaption className="mt-3 text-sm text-muted-foreground">{name}</figcaption>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+            {[
+              { name: "Smart Retail Platform", desc: "POS + inventory with analytics.", alt: "Smart Retail Platform thumbnail" },
+              { name: "E‑Gov Services Portal", desc: "Secure citizen services.", alt: "E‑Gov Services Portal thumbnail" },
+              { name: "Cloud Migration Suite", desc: "Faster, cost‑efficient cloud.", alt: "Cloud Migration Suite thumbnail" },
+              { name: "AI Support Assistant", desc: "24/7 customer service.", alt: "AI Support Assistant thumbnail" },
+            ].map((p) => (
+              <figure key={p.name} className="rounded-xl border border-border bg-card/60 p-5 backdrop-blur-md">
+                <img src="/placeholder.svg" alt={p.alt} loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover bg-secondary/50" />
+                <figcaption className="mt-3">
+                  <div className="text-sm font-medium">{p.name}</div>
+                  <p className="text-xs text-muted-foreground">{p.desc}</p>
+                </figcaption>
               </figure>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Button variant="glass" size="lg" asChild>
+              <a href="#portfolio">View More</a>
+            </Button>
+          </div>
+        </Section>
+
+        <Section id="testimonials" title="Testimonials" subtitle="What our clients say">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
+            {[
+              { quote: "Exceptional delivery and great communication.", name: "Amina K." },
+              { quote: "Their team modernized our systems with zero downtime.", name: "John M." },
+              { quote: "Proactive support and solid security practices.", name: "Grace W." },
+            ].map((t) => (
+              <blockquote key={t.name} className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md">
+                <p className="text-sm text-muted-foreground">“{t.quote}”</p>
+                <footer className="mt-3 text-sm font-medium">— {t.name}</footer>
+              </blockquote>
+            ))}
+          </div>
+        </Section>
+
+        <Section id="newsletter" title="Newsletter" subtitle="Join for updates, insights, and offers.">
+          <form
+            className="mx-auto flex max-w-md items-center gap-2"
+            onSubmit={(e) => {
+              e.preventDefault();
+              // @ts-ignore
+              const email = e.currentTarget.email?.value as string;
+              if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                // Lazy import to avoid hard dependency here; use toast if available
+                import("@/components/ui/use-toast").then(({ toast }) => toast({ description: "Please enter a valid email." }));
+                return;
+              }
+              import("@/components/ui/use-toast").then(({ toast }) => toast({ description: "Subscribed! Thank you." }));
+              // @ts-ignore
+              e.currentTarget.reset();
+            }}
+          >
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+              className="flex h-12 w-full rounded-md border border-input bg-background px-4 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label="Email address"
+            />
+            <Button type="submit" variant="cta" size="lg">Subscribe</Button>
+          </form>
         </Section>
 
         <Section id="blog" title="Blog" subtitle="Insights on engineering, AI, and product.">
