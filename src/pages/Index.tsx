@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Cloud, Wrench } from "lucide-react";
 import Footer from "@/components/Footer";
+import heroImage from "@/assets/hero-tech.jpg";
 
 const Section = ({ id, title, subtitle, children }: { id: string; title: string; subtitle?: string; children: React.ReactNode }) => (
   <section id={id} className="section container animate-fade-in">
@@ -15,8 +16,16 @@ const Section = ({ id, title, subtitle, children }: { id: string; title: string;
 export default function Index() {
   return (
     <div>
-      <header id="home" className="bg-tech-hero">
-        <div className="container min-h-[70vh] md:min-h-[78vh] flex flex-col items-center justify-center text-center gap-6">
+      <header id="home" className="relative isolate">
+        <img
+          src={heroImage}
+          alt="Abstract technology background for FRIMAT TECHNOLOGIES"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
+        <div className="relative container min-h-[70vh] md:min-h-[78vh] flex flex-col items-center justify-center text-center gap-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs text-muted-foreground backdrop-blur-md">
             <Shield className="h-3.5 w-3.5" /> Secure. Scalable. Smart.
           </span>
