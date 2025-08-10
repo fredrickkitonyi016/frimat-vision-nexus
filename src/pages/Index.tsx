@@ -61,7 +61,10 @@ export default function Index() {
         <Section id="about" title="About" subtitle="We are a modern tech company building secure, scalable, and delightful digital products.">
           <div className="mx-auto max-w-5xl space-y-8">
             <p className="text-sm md:text-base text-muted-foreground text-center">
-              At FRIMAT TECHNOLOGIES, our mission is to empower businesses and communities with innovative, reliable, and customer‑centric technology solutions.
+              FRIMAT TECHNOLOGIES is a product and engineering partner focused on turning ideas into secure, scalable, and user‑friendly software.
+            </p>
+            <p className="text-sm md:text-base text-muted-foreground text-center">
+              Our team covers product strategy, UX, cloud architecture, cybersecurity, data/AI, and DevOps—delivering end‑to‑end from discovery to long‑term support.
             </p>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <article className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md hover:shadow-xl transition-shadow">
@@ -91,12 +94,12 @@ export default function Index() {
         <Section id="services" title="Services" subtitle="What we do best — modern, secure, and scalable solutions.">
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             {[
-              { title: "Web Development", icon: Code2, desc: "Responsive websites, portals, and e‑commerce tailored to your brand." },
-              { title: "Software Development", icon: Cpu, desc: "Custom applications that streamline operations and deliver value." },
-              { title: "IT Support & Maintenance", icon: Wrench, desc: "Proactive support, monitoring, and reliable on‑site/remote help." },
-              { title: "Cybersecurity Solutions", icon: Shield, desc: "Protect your data with audits, hardening, and incident readiness." },
-              { title: "Digital Marketing", icon: Rocket, desc: "SEO, social, and campaigns that grow your audience and leads." },
-              { title: "Cloud Services", icon: Cloud, desc: "Cloud setup, migration, and cost‑efficient operations." },
+              { title: "Web Development", icon: Code2, desc: "High‑performance websites, portals, and e‑commerce with accessibility, SEO, and CMS integration." },
+              { title: "Software Development", icon: Cpu, desc: "API‑first systems, integrations, and modern architectures with CI/CD and strong observability." },
+              { title: "IT Support & Maintenance", icon: Wrench, desc: "Managed updates, monitoring, backups, and SLAs to keep your systems healthy and secure." },
+              { title: "Cybersecurity Solutions", icon: Shield, desc: "Security assessments, hardening, MFA/SSO, incident readiness, and compliance guidance." },
+              { title: "Digital Marketing", icon: Rocket, desc: "SEO audits, content strategy, analytics, and campaigns focused on measurable growth." },
+              { title: "Cloud Services", icon: Cloud, desc: "Cloud setup, migrations, containerization, cost optimization, and SRE best practices." },
             ].map((s) => (
               <article key={s.title} className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md transition-transform hover:scale-[1.02] hover:shadow-xl">
                 <s.icon className="h-6 w-6 text-accent" />
@@ -125,10 +128,10 @@ export default function Index() {
         <Section id="portfolio" title="Portfolio" subtitle="A snapshot of recent projects and experiments.">
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
             {[
-              { name: "Smart Retail Platform", desc: "POS + inventory with analytics.", alt: "Smart Retail Platform thumbnail" },
-              { name: "E‑Gov Services Portal", desc: "Secure citizen services.", alt: "E‑Gov Services Portal thumbnail" },
-              { name: "Cloud Migration Suite", desc: "Faster, cost‑efficient cloud.", alt: "Cloud Migration Suite thumbnail" },
-              { name: "AI Support Assistant", desc: "24/7 customer service.", alt: "AI Support Assistant thumbnail" },
+              { name: "Smart Retail Platform", desc: "POS + inventory with barcode support and real‑time revenue dashboards.", alt: "Smart Retail Platform thumbnail" },
+              { name: "E‑Gov Services Portal", desc: "Secure citizen onboarding, payments, and accessible self‑service flows.", alt: "E‑Gov Services Portal thumbnail" },
+              { name: "Cloud Migration Suite", desc: "Automated assessments, phased migration, and cost/health monitoring.", alt: "Cloud Migration Suite thumbnail" },
+              { name: "AI Support Assistant", desc: "Multilingual chatbot with human handoff and actionable analytics.", alt: "AI Support Assistant thumbnail" },
             ].map((p) => (
               <figure key={p.name} className="rounded-xl border border-border bg-card/60 p-5 backdrop-blur-md">
                 <img src="/placeholder.svg" alt={p.alt} loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover bg-secondary/50" />
@@ -149,9 +152,9 @@ export default function Index() {
         <Section id="testimonials" title="Testimonials" subtitle="What our clients say">
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
             {[
-              { quote: "Exceptional delivery and great communication.", name: "Amina K." },
-              { quote: "Their team modernized our systems with zero downtime.", name: "John M." },
-              { quote: "Proactive support and solid security practices.", name: "Grace W." },
+              { quote: "They delivered exactly what we needed—secure, reliable, and on time. Communication was world‑class.", name: "Amina K." },
+              { quote: "Migration to the cloud cut our hosting bill and improved performance without downtime.", name: "John M." },
+              { quote: "Their proactive support and security hardening gave us real peace of mind.", name: "Grace W." },
             ].map((t) => (
               <blockquote key={t.name} className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md">
                 <p className="text-sm text-muted-foreground">“{t.quote}”</p>
@@ -201,6 +204,60 @@ export default function Index() {
                 </div>
               </article>
             ))}
+          </div>
+        </Section>
+
+        <Section id="contact" title="Contact" subtitle="Let’s talk about your project.">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+            <article className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md">
+              <h5 className="text-lg font-medium">How we can help</h5>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                <li>• Discovery workshops and technical audits</li>
+                <li>• Prototypes, MVPs, and full product delivery</li>
+                <li>• Cloud, security, and performance improvements</li>
+                <li>• Ongoing maintenance and on‑call support</li>
+              </ul>
+              <p className="mt-4 text-sm text-muted-foreground">We typically respond within one business day.</p>
+            </article>
+
+            <form
+              className="rounded-xl border border-border bg-card/60 p-6 backdrop-blur-md space-y-3"
+              onSubmit={(e) => {
+                e.preventDefault();
+                // @ts-ignore
+                const name = e.currentTarget.name?.value as string;
+                // @ts-ignore
+                const email = e.currentTarget.email?.value as string;
+                // @ts-ignore
+                const message = e.currentTarget.message?.value as string;
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !name || !message) {
+                  import("@/components/ui/use-toast").then(({ toast }) =>
+                    toast({ description: "Please complete all fields with a valid email." })
+                  );
+                  return;
+                }
+                import("@/components/ui/use-toast").then(({ toast }) =>
+                  toast({ description: "Message sent! We’ll get back to you shortly." })
+                );
+                // @ts-ignore
+                e.currentTarget.reset();
+              }}
+              aria-label="Contact form"
+            >
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-sm">Name</label>
+                <input id="name" name="name" required className="flex h-12 w-full rounded-md border border-input bg-background px-4 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm">Email</label>
+                <input id="email" name="email" type="email" required className="flex h-12 w-full rounded-md border border-input bg-background px-4 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm">Message</label>
+                <textarea id="message" name="message" required rows={4} className="flex w-full rounded-md border border-input bg-background px-4 py-3 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
+              </div>
+              <Button type="submit" variant="cta" size="lg">Send message</Button>
+            </form>
           </div>
         </Section>
       </main>
