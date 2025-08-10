@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Code2, Cpu, Rocket, Shield, ShoppingCart, Cloud, Wrench } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Section = ({ id, title, subtitle, children }: { id: string; title: string; subtitle?: string; children: React.ReactNode }) => (
   <section id={id} className="section container animate-fade-in">
@@ -194,6 +195,17 @@ export default function Index() {
           </div>
         </Section>
       </main>
+      <Footer quickLinks={[
+        { label: "Home", href: "#home" },
+        { label: "About Us", href: "#about" },
+        { label: "Services", href: "#services" },
+        { label: "Shop", href: "#shop" },
+        { label: "Portfolio", href: "#portfolio" },
+        { label: "Testimonials", href: "#testimonials" },
+        { label: "Newsletter", href: "#newsletter" },
+        { label: "Blog", href: "#blog" },
+        { label: "Contact Us", href: "#contact" },
+      ]} />
     </div>
   );
 }

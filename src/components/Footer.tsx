@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
 
-const QUICK_LINKS: { label: string; href: string }[] = [
+type QuickLink = { label: string; href: string };
+const DEFAULT_QUICK_LINKS: QuickLink[] = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
@@ -12,7 +13,8 @@ const QUICK_LINKS: { label: string; href: string }[] = [
   { label: "Terms of Service", href: "#terms" },
 ];
 
-export default function Footer() {
+export default function Footer({ quickLinks }: { quickLinks?: QuickLink[] }) {
+  const links = quickLinks ?? DEFAULT_QUICK_LINKS;
   return (
     <footer className="mt-20 border-t border-border bg-card/60" role="contentinfo">
       <div className="container py-10">
@@ -44,7 +46,7 @@ export default function Footer() {
           <nav aria-label="Quick Links">
             <h3 className="text-sm font-semibold tracking-wide">Quick Links</h3>
             <ul className="mt-3 grid grid-cols-2 gap-2 text-sm text-muted-foreground">
-              {QUICK_LINKS.map((l) => (
+              {links.map((l) => (
                 <li key={l.label}>
                   <a href={l.href} className="hover-scale">
                     {l.label}
